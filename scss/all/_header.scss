@@ -1,0 +1,125 @@
+header {
+    width: 100%;
+
+    // example
+
+    .nav {
+        display: flex;
+        height: 70px;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 38px;
+
+        &__logo {
+            cursor: pointer;
+        }
+
+        &__list {
+            display: flex;
+            align-items:center;
+            gap: 50px;
+            list-style-type: none;
+
+            &--item {
+                text-transform: uppercase;
+                text-align: center;
+
+                &:nth-child(3){
+                    margin-right: 150px;
+                }
+
+                &-link {
+                    color: #000;
+                    text-align: center;
+                    font-family: Montserrat;
+                        font-size: 15px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: normal;
+                        text-decoration: none;
+                }
+                
+                &-number{
+                    color: #000;
+                    text-decoration: none;
+                        font-family: Montserrat;
+                        font-size: 18px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: normal;
+                }
+
+                &-button-first{
+                    display: inline-flex;
+                        border-radius:50%;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 5px;
+                        width: 58px;
+                            height: 58px;
+                            border:none;
+
+                            &:hover{
+                                svg {
+                                    path{
+                                        fill:black;
+                                    }
+                                }
+                            }
+
+                            &:active {
+                                background-color: #299764;
+                                svg {
+                                    path {
+                                        fill: white;
+                                    }
+                                 }
+                             }
+
+                }
+
+
+                
+
+                &-button-second{
+                    display: inline-flex;
+                        padding: 18px 30px;
+                        align-items: flex-start;
+                        gap: 8px;
+                        color: #FFF;
+                            font-family: Montserrat;
+                            font-size: 18px;
+                            font-style: normal;
+                            font-weight: 500;
+                            line-height: normal;
+                            border-radius: 100px;
+                                background: #299764;
+                                border:none;
+
+                                &:hover{
+                                    background-color: #077743;
+                                }
+
+                                &:active{
+                                    background: #F5F5F5;
+                                    border-radius: 100px;
+                                        color: #000;
+                                        font-family: Montserrat;
+                                        font-size: 18px;
+                                        font-style: normal;
+                                        font-weight: 600;
+                                        line-height: normal;
+
+                                        svg{
+                                            path{
+                                                fill:black;
+                                            }
+                                        }
+
+                                        
+                                }
+                }
+            }
+        }
+    }
+}
