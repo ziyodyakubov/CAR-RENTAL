@@ -311,6 +311,7 @@ template {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 * {
@@ -326,13 +327,17 @@ template {
 
 header {
   width: 100%;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  border: 2px solid #fff;
+  z-index: 84;
 }
 header .nav {
   display: flex;
   height: 70px;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 38px;
 }
 header .nav__logo {
   cursor: pointer;
@@ -343,14 +348,14 @@ header .nav__list {
   gap: 50px;
   list-style-type: none;
 }
-header .nav__list--item {
+header .nav__list__item {
   text-transform: uppercase;
   text-align: center;
 }
-header .nav__list--item:nth-child(3) {
+header .nav__list__item:nth-child(3) {
   margin-right: 150px;
 }
-header .nav__list--item-link {
+header .nav__list__item_link {
   color: #000;
   text-align: center;
   font-family: Montserrat;
@@ -360,7 +365,7 @@ header .nav__list--item-link {
   line-height: normal;
   text-decoration: none;
 }
-header .nav__list--item-number {
+header .nav__list__item_number {
   color: #000;
   text-decoration: none;
   font-family: Montserrat;
@@ -369,26 +374,7 @@ header .nav__list--item-number {
   font-weight: 600;
   line-height: normal;
 }
-header .nav__list--item-button-first {
-  display: inline-flex;
-  border-radius: 50%;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
-  width: 58px;
-  height: 58px;
-  border: none;
-}
-header .nav__list--item-button-first:hover svg path {
-  fill: black;
-}
-header .nav__list--item-button-first:active {
-  background-color: #299764;
-}
-header .nav__list--item-button-first:active svg path {
-  fill: white;
-}
-header .nav__list--item-button-second {
+header .nav__list__item_button_second {
   display: inline-flex;
   padding: 18px 30px;
   align-items: flex-start;
@@ -403,10 +389,10 @@ header .nav__list--item-button-second {
   background: #299764;
   border: none;
 }
-header .nav__list--item-button-second:hover {
+header .nav__list__item_button_second:hover {
   background-color: #077743;
 }
-header .nav__list--item-button-second:active {
+header .nav__list__item_button_second:active {
   background: #F5F5F5;
   border-radius: 100px;
   color: #000;
@@ -416,8 +402,27 @@ header .nav__list--item-button-second:active {
   font-weight: 600;
   line-height: normal;
 }
-header .nav__list--item-button-second:active svg path {
+header .nav__list__item_button_second:active svg path {
   fill: black;
+}
+header .nav__list #nav__list__item_button_first {
+  display: inline-flex;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 58px;
+  height: 58px;
+  border: none;
+}
+header .nav__list #nav__list__item_button_first:hover svg path {
+  fill: black;
+}
+header .nav__list #nav__list__item_button_first:active {
+  background-color: #299764;
+}
+header .nav__list #nav__list__item_button_first:active svg path {
+  fill: white;
 }
 
 main {
@@ -597,6 +602,11 @@ main {
   background: #F5F5F5;
   height: 679px;
 }
+@media (prefers-color-scheme: dark) {
+  #section-3 {
+    color: white;
+  }
+}
 
 .brand_wrapper {
   display: flex;
@@ -704,7 +714,7 @@ main {
   border-radius: 0px 32px 32px 0px;
   background: #299764;
   height: 479px;
-  box-sizing: border-box;
+  overflow-x: scroll;
 }
 .swiper-2__card {
   padding: 24px;
@@ -824,6 +834,15 @@ main {
   border-radius: 20px;
   background: #F5F5F5;
 }
+.nmagap__card-wrapper .nmagap__card:hover {
+  background-color: #299764;
+}
+.nmagap__card-wrapper .nmagap__card:hover div h3, .nmagap__card-wrapper .nmagap__card:hover p {
+  color: rgba(255, 255, 255, 0.852);
+}
+.nmagap__card-wrapper .nmagap__card:hover img {
+  mix-blend-mode: multiply;
+}
 .nmagap__card-wrapper .nmagap__card:nth-child(1) h3 {
   width: 211px;
 }
@@ -849,6 +868,217 @@ main {
 
 footer {
   width: 100%;
+}
+footer .footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 1200px;
+  height: 500px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  border: 1.5px solid #E5E7EA;
+  background: #FFF;
+  padding: 40px;
+  margin-bottom: 160px;
+}
+footer .footer__wrapper_right--title {
+  width: 590px;
+  margin-bottom: 94px;
+}
+footer .footer__wrapper_right--title h2 {
+  color: #000;
+  font-family: Montserrat;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+footer .footer__wrapper_right--title p {
+  margin-top: 10px;
+  color: #555;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+footer .footer__wrapper_right--cards__wrapper {
+  display: flex;
+  gap: 10px;
+}
+footer .footer__wrapper_right--cards__wrapper--card {
+  width: 200px;
+  height: 160px;
+  flex-shrink: 0;
+  border-radius: 16px;
+  background: #F5F5F5;
+  padding: 17px;
+}
+footer .footer__wrapper_right--cards__wrapper--card:hover {
+  background: #299764;
+  color: white;
+}
+footer .footer__wrapper_right--cards__wrapper--card img {
+  margin-left: 130px;
+  mix-blend-mode: multiply;
+}
+footer .footer__wrapper_right--cards__wrapper--card h3 {
+  margin-top: 29px;
+  color: #000;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 22px;
+}
+footer .footer__wrapper_left {
+  position: absolute;
+}
+footer .footer__wrapper_left .green-circle {
+  top: -150px;
+  left: 760px;
+  position: relative;
+  z-index: 1;
+}
+footer .footer__wrapper_left .usta {
+  position: relative;
+  top: 10px;
+  left: 400px;
+  z-index: 2;
+}
+footer .footer__wrapper-2 {
+  border-top: 1.5px solid #E5E7EA;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  display: flex;
+  align-items: center;
+  gap: 65px;
+}
+footer .footer__wrapper-2--logo_title {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 240px;
+}
+footer .footer__wrapper-2--logo_title p {
+  margin-top: 20px;
+  color: #555;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+footer .footer__wrapper-2--logo_title img {
+  position: relative;
+  left: -45px;
+}
+footer .footer__wrapper-2--ul__wrapper {
+  display: flex;
+  gap: 150px;
+}
+footer .footer__wrapper-2--ul__wrapper ul {
+  list-style-type: none;
+}
+footer .footer__wrapper-2--ul__wrapper ul li {
+  color: #000;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  line-height: 25px;
+}
+footer .footer__wrapper-2--ul__wrapper ul li a {
+  text-decoration: none;
+  color: #555;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+footer .footer__wrapper-2--ul__wrapper ul li a:hover {
+  color: #000;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration-line: underline;
+  cursor: pointer;
+}
+footer .footer__wrapper-3 {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+footer .footer__wrapper-3--title h4 {
+  width: 158px;
+  color: #000;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+}
+footer .footer__wrapper-3--flexbox {
+  padding-top: 40px;
+  border-top: 1.5px solid #E5E7EA;
+  margin-left: 147px;
+  display: flex;
+  justify-content: space-between;
+  gap: 70px;
+}
+footer .footer__wrapper-3--flexbox ul {
+  list-style-type: none;
+}
+footer .footer__wrapper-3--flexbox ul li {
+  color: #000;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  line-height: 30px;
+}
+footer .footer__wrapper-3--flexbox ul li a {
+  text-decoration: none;
+  color: #555;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+footer .footer__wrapper-3--flexbox ul li a:hover {
+  color: #000;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration-line: underline;
+  cursor: pointer;
+}
+footer .footer__wrapper-3--flexbox__social-wrapper {
+  margin-top: 22px;
+}
+footer .footer__wrapper-3--flexbox .up_btn {
+  display: flex;
+  width: 70px;
+  height: 70px;
+  padding: 19px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  background: #299764;
+  border: none;
+  position: relative;
+  left: 150px;
+  top: 22px;
+  bottom: 40px;
 }
 
 .swiper {
