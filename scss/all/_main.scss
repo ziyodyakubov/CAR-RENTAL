@@ -198,6 +198,7 @@ main {
 #section-3 {
     background: #F5F5F5;
     height: 679px;
+    width: 100%;
 
     @media(prefers-color-scheme:dark) {
         color: white;
@@ -242,7 +243,6 @@ main {
 
 .card__wrapper {
     background-color: #fff;
-    width: 1200px;
     height: 479px;
     justify-content: center;
     align-items: center;
@@ -317,13 +317,13 @@ main {
     z-index: 2;
     display: flex;
     gap: 20px;
-    width: 730px;
+    width: 1200px;
     padding: 50px;
     border-radius: 0px 32px 32px 0px;
     background: #299764;
     height: 479px;
     // box-sizing: border-box;
-    overflow-x:scroll;
+    overflow-x: scroll;
 
     &__card {
 
@@ -384,6 +384,7 @@ main {
             font-weight: 400;
             line-height: normal;
         }
+
     }
 }
 
@@ -458,14 +459,17 @@ main {
         border-radius: 20px;
         background: #F5F5F5;
 
-        &:hover{
+        &:hover {
             background-color: #299764;
-            div h3,p{
+
+            div h3,
+            p {
                 color: rgba(255, 255, 255, 0.852);
             }
-                        img {
-                            mix-blend-mode: multiply;
-                        }
+
+            img {
+                mix-blend-mode: multiply;
+            }
         }
 
         &:nth-child(1) {
@@ -496,5 +500,333 @@ main {
         }
     }
 
+
+}
+
+@media screen and (max-width:430px) {
+
+    .container {
+        width: 100%;
+        max-width: 390px;
+        margin: 0 auto;
+        padding: 0 10px;
+    }
+
+    header {
+        .nav {
+            &__list {
+                display: none;
+            }
+        }
+
+        .menu-logo {
+            display: flex;
+        }
+    }
+
+    main {
+        .swiper {
+            width: 358px;
+            height: 300px;
+            flex-shrink: 0;
+        }
+
+        #section-2 {
+            .sct2__wrapper {
+                .sct2__wrapper-flexbox {
+                    .search-input {
+                        input {
+                            font-size: 16px;
+                            width: 350px;
+                            height: 60px;
+                            margin-left: -290px;
+                            font-size: 14px;
+                        }
+
+                        .search-logo {
+                            width: 52px;
+                            height: 52px;
+                        }
+
+
+                    }
+                }
+            }
+
+            .center-text {
+                width: 321x;
+                margin-left: -1px;
+                text-align: center;
+                padding: 20px;
+
+                h2 {
+                    margin-top: -2px;
+                    margin-left: 60px;
+                    width: 190px;
+                    text-align: center;
+                    font-size: 24px;
+                    margin-bottom: 6px;
+                }
+
+                p {
+                    font-size: 12px;
+                    text-align: center;
+                    width: 321px;
+                }
+            }
+
+            .car-buttons {
+                margin-top: 10px;
+                gap: 14px;
+                margin-bottom: 16px;
+
+                button {
+                    padding: 14px 20px;
+                    gap: 14px;
+                }
+            }
+
+            .car-card-box {
+                width: 358px;
+                height: 395px;
+                padding: 10px;
+                margin: 2px;
+
+                h3 {
+                    font-size: 20px;
+                }
+
+                h5 {
+                    font-size: 14px;
+                }
+
+                .car-image {
+                    margin-left: -30px;
+                    margin-bottom: 0px;
+                }
+
+                .car-info--flex {
+                    gap: 96px;
+
+                    .mb24 {
+                        margin-top: 20px;
+                    }
+
+                }
+
+                .car-info {
+                    margin-top: -10px;
+                }
+
+                .center-btn {
+                    margin-top: 60px;
+                    left: 80px;
+                }
+            }
+        }
+
+        #section-3 {
+            background: #F5F5F5;
+            width: 390px;
+            height: 840px;
+
+            .card__wrapper {
+                // display: flex;
+                height: 800px;
+                width: 900px;
+                justify-content: start;
+                flex-direction: column;
+                position: relative;
+                top: 20px;
+                width: 100%;
+                bottom: 100px;
+
+                .card__wrapper--box {
+                    margin-top: 0;
+                    position: relative;
+                    left: -10px;
+                    width: 328px;
+                    height: 387px;
+                    padding: 10px;
+                    margin-bottom: 24px;
+
+                    .card__wrapper--title {
+                        span {
+                            font-size: 16px;
+                        }
+                    }
+
+                    h2 {
+                        width: 306px;
+                        font-size: 38px;
+                        line-height: 50px;
+                    }
+
+                    p {
+                        font-size: 14px;
+                    }
+
+                    button {
+                        padding: 18px 50px;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+            .swiper-2 {
+                max-width: 358px;
+                max-height: 444px;
+                padding: 20px;
+                border-radius: 0px;
+                background: #299764;
+
+                &__card {
+                    padding: 16px;
+                    width: 1214px;
+                    height: 380px;
+                    background-color: #fff;
+                    border-radius: 16px;
+                    z-index: -84;
+
+
+                    .otsenka {
+                        margin-top: 40px;
+                        display: flex;
+                        width: 218px;
+                        align-items: center;
+                        gap: 16px;
+
+                        span {
+                            color: #000;
+                            font-family: Montserrat;
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 500;
+                            line-height: normal;
+                        }
+                    }
+
+
+                    p {
+                        display: inline;
+                        text-align: start;
+                        width: 194px;
+                        height: 220px;
+                        font-size: 14px;
+                    }
+                }
+
+                &__user {
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+                    margin-bottom: 20px;
+
+                    h3 {
+                        display: inline;
+                        color: #000;
+                        font-family: Montserrat;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: normal;
+                    }
+
+                    p {
+                        display: inline;
+                        color: #555;
+                        font-family: Montserrat;
+                        font-size: 12px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                    }
+
+                    .google img{
+                        position: relative;
+                        left:-20px;
+                    }
+                }
+            }
+
+        }
+
+            .sct4__wrapper {
+                overflow-x: hidden;
+                    h4{
+                        font-size: 20px;
+                        width: 283px;
+                    }
+                    &-img img{
+                        width: 100px;
+                        height: 28px;
+                    }
+            }
+
+            .nmagap__wrapper{
+                .nmagap__wrapper--title{
+                    margin-top: 10px;
+                    text-align: center;
+                    position: relative;
+                    left: -280px;
+                    width: 321px;
+
+                        h4{
+                                font-size: 24px;
+                        }
+
+                        p{
+                            font-size: 12px;
+                        }
+                }
+
+                .nmagap__card-wrapper{
+                    .nmagap__card {
+                            display: flex;
+                            // justify-content: space-between;
+                            padding: 28px;
+                            width: 358px;
+                            height: 178px;
+                            flex-shrink: 0;
+                            border-radius: 20px;
+                            background: #F5F5F5;
+
+                            div img{
+                                position: relative;
+                                left:-60px;
+                            }
+                    
+                            &:hover {
+                                background-color: #299764;
+                    
+                                div h3,
+                                p {
+                                    color: rgba(255, 255, 255, 0.852);
+                                }
+                    
+                                img {
+                                    mix-blend-mode: multiply;
+                                }
+                            }
+                    
+                            &:nth-child(1) {
+                                h3 {
+                                    width: 185px;
+                                }
+                            }
+                    
+                            h3 {
+                                width: 244px;
+                                font-size: 28px;
+                            }
+                    
+                            p {
+                                width: 316px;
+                                font-size: 14px;
+                            }
+                        }
+                }
+            }
+    }
 
 }
